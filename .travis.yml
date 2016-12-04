@@ -5,7 +5,8 @@ install: echo "Install step ..."
 script: echo "Script step ..." && true
 
 before_deploy :
-  - zip -r package.zip *
+  - zip -r package.zip srv/*
   - mkdir -p target
   - mv package.zip target
+  - openssl aes-256-cbc -K $encrypted_db52318a9052_key -iv $encrypted_db52318a9052_iv -in deploy/foudil_key.pem.enc -out deploy/foudil_key.pem -d
 
