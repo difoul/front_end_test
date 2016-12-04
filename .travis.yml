@@ -13,4 +13,4 @@ deploy:
   provider: script
   skip_cleanup: true
   script: 
-  - cd deploy && chmod 770 deploy_app.sg && ./deploy_app.sh
+  - cd deploy && chmod 770 deploy_app.sh && ./deploy_app.sh
